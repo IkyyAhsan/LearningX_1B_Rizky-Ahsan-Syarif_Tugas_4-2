@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
       myController.user.value = myController.user.value.toUpperCase();
     }
     return Scaffold(
-      appBar: AppBar(title: Text(myController.name.value, style: TextStyle(fontWeight: FontWeight.w500, color: Color.fromRGBO(255, 140, 149, 1)),)),
+      appBar: AppBar(title: Text('Kamariati Cosmetic', style: TextStyle(fontWeight: FontWeight.w500, color: Color.fromRGBO(255, 140, 149, 1)),)),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Center(
