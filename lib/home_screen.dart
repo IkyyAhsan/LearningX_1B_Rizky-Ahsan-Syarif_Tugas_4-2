@@ -16,10 +16,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var myController = MyController();
     void ubahNama(){
-      myController.name.value = myController.name.value.toUpperCase();
+      myController.user.value = myController.user.value.toUpperCase();
     }
     return Scaffold(
-      appBar: AppBar(title: Text('Kamariati Cosmetic', style: TextStyle(fontWeight: FontWeight.w500, color: Color.fromRGBO(255, 140, 149, 1)),)),
+      appBar: AppBar(title: Text(myController.name.value, style: TextStyle(fontWeight: FontWeight.w500, color: Color.fromRGBO(255, 140, 149, 1)),)),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Center(
@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // -- 1. Penerapan OBX untuk String terdapat disini
-              Obx(() => TextButton(onPressed: () => ubahNama(), child: Text(myController.name.value, textAlign: TextAlign.center, style: TextStyle( fontSize: 24, fontWeight: FontWeight.w700, color: Color.fromRGBO(255, 140, 149, 1)),),)),
+              Obx(() => TextButton(onPressed: () => ubahNama(), child: Text(myController.user.value, textAlign: TextAlign.center, style: TextStyle( fontSize: 24, fontWeight: FontWeight.w700, color: Color.fromRGBO(255, 140, 149, 1)),),)),
               SizedBox(height: 24,),
               ElevatedButton(
                 onPressed: () {
